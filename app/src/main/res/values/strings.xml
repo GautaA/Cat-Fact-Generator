@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Cat Fact Generator</string>
+    <string name="random_fact">Random Fact</string>
 </resources>
