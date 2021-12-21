@@ -1,8 +1,7 @@
-package com.example.catfactgenerator
+package com.example.catfactgenerator.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.xml.parsers.FactoryConfigurationError
 
 object RetrofitInstance {
 

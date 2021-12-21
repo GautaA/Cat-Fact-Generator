@@ -1,4 +1,4 @@
-package com.example.catfactgenerator
+package com.example.catfactgenerator.api
 
 import retrofit2.Response
 import retrofit2.http.GET

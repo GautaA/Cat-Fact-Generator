@@ -1,4 +1,6 @@
-package com.example.catfactgenerator
+package com.example.catfactgenerator.api
+
+import com.example.catfactgenerator.api.Status
 
 data class Fact(
     val __v: Int,

@@ -1,4 +1,4 @@
-package com.example.catfactgenerator
+package com.example.catfactgenerator.api
 
 data class Status(
     val sentCount: Int,
