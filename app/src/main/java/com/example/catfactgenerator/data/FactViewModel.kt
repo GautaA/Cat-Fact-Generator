@@ -8,7 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class FactViewModel(application: Application): AndroidViewModel(application) {
-    private val readFact: LiveData<List<FactEntity>>
+    val readFact: LiveData<List<FactEntity>>
     private val repository: FactRepository
 
     init {

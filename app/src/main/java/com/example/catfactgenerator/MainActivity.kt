@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.catfactgenerator.api.RetrofitInstance
@@ -49,12 +50,17 @@ class MainActivity : AppCompatActivity() {
                     if (response.isSuccessful && response.body() != null) {
                         val fact = response.body()
                         if (fact != null) {
-                            insertDataToDatabase(binding.tvFact.text.toString())
+                            insertDataToDatabase(fact.text)
                             binding.tvFact.text = fact.text
                         }
                     }
                 }
             } else {
+                factViewModel.readFact.observe(this, Observer {
+                    if (it != null) {
+                        binding.tvFact.text = it[0].text
+                    }
+                })
                 Toast.makeText(this, "Offline mode", Toast.LENGTH_LONG ).show()
             }
         }
